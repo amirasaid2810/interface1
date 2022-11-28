@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="670.0" style="-fx-background-color: BFEFEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#089e3b" layoutX="35.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEW :" underline="true" wrappingWidth="77.47003555297852">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Text>
+      <VBox layoutX="35.0" layoutY="81.0" prefHeight="232.0" prefWidth="253.0" style="-fx-border-color: #008000; -fx-border-style: solid;">
+         <children>
+            <TextField promptText=" Purchase ID :" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding></TextField>
+            <TextField layoutX="17.0" layoutY="17.0" promptText="Medication REF :" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="11.0" layoutY="49.0" promptText=" Date  :                /                 /                    /" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="11.0" layoutY="75.0" promptText="Qte :" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="11.0" layoutY="102.0" promptText=" Price :                                              DA" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </VBox>
+      <TableView layoutX="323.0" layoutY="81.0" prefHeight="372.0" prefWidth="333.0" style="-fx-background-color: #000000;">
+        <columns>
+          <TableColumn prefWidth="66.0" style="-fx-background-color: FFFFFF;" text="Purchase ID" />
+          <TableColumn prefWidth="66.0" text="REF" />
+            <TableColumn prefWidth="66.0" text="Date" />
+            <TableColumn prefWidth="66.0" text="Qte" />
+            <TableColumn prefWidth="67.0" text="Price" />
+        </columns>
+      </TableView>
+      <Text fill="#089e3b" layoutX="323.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Sells :" underline="true" wrappingWidth="233.4700050354004">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

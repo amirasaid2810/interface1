@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="650.0" style="-fx-background-color: BFEFEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="22.0" layoutY="69.0" prefHeight="184.0" prefWidth="267.0" style="-fx-border-color: #008000;">
+         <children>
+            <TextField promptText="Supplier First Name" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="15.0" layoutY="15.0" promptText="Supplier Last Name" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="10.0" layoutY="47.0" promptText="Supplier Phone Number" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="15.0" layoutY="15.0" promptText="Supplier Mail Adress" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </VBox>
+      <Text layoutX="29.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Informations :" underline="true" wrappingWidth="213.98306846618652">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add The Missing Medications :" underline="true" wrappingWidth="213.98306846618652">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Text>
+      <VBox layoutX="22.0" layoutY="321.0" prefHeight="184.0" prefWidth="267.0" style="-fx-border-color: #008000;">
+         <children>
+            <TextField promptText="Ref.Product" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="15.0" layoutY="15.0" promptText="DCI.Product" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="10.0" layoutY="47.0" promptText="Qte.Product" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+            <TextField layoutX="15.0" layoutY="15.0" promptText="Price.Product" style="-fx-background-color: FFFFFF;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </VBox>
+      <Text layoutX="397.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Commande:" underline="true" wrappingWidth="174.64975547790527">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Text>
+      <Ellipse fill="#089e3b" layoutX="463.0" layoutY="270.0" radiusX="91.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="414.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0000.00 DA" wrappingWidth="114.64966773986816">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Ellipse fill="#089e3b" layoutX="360.0" layoutY="534.0" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#089e3b" layoutX="471.0" layoutY="534.0" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#089e3b" layoutX="580.0" layoutY="534.0" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="338.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD" wrappingWidth="68.25909423828125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="460.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="432.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Validate" wrappingWidth="77.59243774414062">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="555.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Print" wrappingWidth="50.925689697265625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
