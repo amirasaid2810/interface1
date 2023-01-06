@@ -9,10 +9,13 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Sells.fxml"));
+        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("Supplier.fxml"));
+        Scene scene1 = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene2 = new Scene (fxmlLoader2.load());
         stage.setTitle("Hello!");
-        stage.setScene(scene);
+        stage.setScene(scene1);
+        stage.setScene(scene2);
         stage.show();
     }
 
