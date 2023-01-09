@@ -53,7 +53,7 @@
          </padding>
       </TextField>
    </VBox>
-   <TableView layoutX="323.0" layoutY="81.0" prefHeight="372.0" prefWidth="333.0" style="-fx-background-color: #000000;">
+   <TableView fx:id="sellsTableView" layoutX="323.0" layoutY="81.0" prefHeight="372.0" prefWidth="333.0" style="-fx-background-color: #000000;">
       <columns>
          <TableColumn fx:id="idcolumn" prefWidth="66.0" style="-fx-background-color: FFFFFF;" text="Purchase ID" />
          <TableColumn fx:id="REFcolumn" prefWidth="66.0" text="REF" />

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="670.0" style="-fx-background-color: BFEFEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interface1.SupplierController">
+   <Text layoutX="26.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informations About Supplier :" underline="true" wrappingWidth="202.13671112060547">
+      <font>
+         <Font name="Ebrima Bold" size="14.0" />
+      </font>
+   </Text>
+   <VBox layoutX="26.0" layoutY="72.0" prefHeight="215.0" prefWidth="238.0">
+      <TextField promptText="Supplier First Name" style="-fx-background-color: FFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField promptText="Supplier Last Name" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField promptText="Supplier Phone Number" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="SuppMailAdress" promptText="Supplier Mail Adress" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+   </VBox>
+   <VBox layoutX="26.0" layoutY="316.0" prefHeight="215.0" prefWidth="238.0">
+      <TextField fx:id="RefMed" promptText="Ref.Product" style="-fx-background-color: FFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="DCIMed" promptText="DCI.Product" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="QteMed" promptText="Qte.Product" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="PriceMed" promptText="Price.Product" style="-fx-background-color: FFFFFF;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+   </VBox>
+   <Text layoutX="26.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add The Missing Medactions :" underline="true" wrappingWidth="218.13670921325684">
+      <font>
+         <Font name="Ebrima Bold" size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="377.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Commande :" underline="true" wrappingWidth="188.1366481781006">
+      <font>
+         <Font name="Ebrima Bold" size="18.0" />
+      </font>
+   </Text>
+   <Button fx:id="addbutton" layoutX="320.0" layoutY="399.0" mnemonicParsing="false" onAction="#AddMissingMeds" text="ADD" />
+   <Button fx:id="validateButton" layoutX="455.0" layoutY="399.0" mnemonicParsing="false" onAction="#ValidateCommande" text="Validate" />
+   <Button layoutX="591.0" layoutY="399.0" mnemonicParsing="false" text="Print" />
+   <Text fx:id="TotalPrice" layoutX="383.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0000.00         DA" wrappingWidth="177.31641578674316">
+      <font>
+         <Font name="System Bold Italic" size="18.0" />
+      </font>
+   </Text>
+</Pane>
