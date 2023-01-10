@@ -82,6 +82,8 @@ public  class SupplierController implements Initializable {
             ps2.setString(1,RefMed.getText());
             ps2.setString(2,QteMed.getText());
             ps2.setString(3,PriceMed.getText());
+            ps2.setString(4,DCIMed.getText());
+
               rs2=ps2.executeQuery();
         } catch (SQLException e) {
             throw new RuntimeException(e);
