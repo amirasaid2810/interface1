@@ -6,16 +6,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
-
-
-
 import java.net.URL;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public  class SupplierController implements Initializable {
 
 
+    public TextField SuppLastName;
+    public TextField SuppFirstName;
     @FXML
     private ResourceBundle resources;
 
@@ -45,6 +48,10 @@ public  class SupplierController implements Initializable {
     @FXML
     private TextField SuppMailAdress;
 
+    Connection conn2 = null;
+
+    ResultSet rs2 = null;
+    PreparedStatement ps2 = null;
 
 
     @FXML
@@ -64,6 +71,36 @@ public  class SupplierController implements Initializable {
         String mailAdressText = SuppMailAdress.getText();
         dialog.setContentText(mailAdressText);
         dialog.show();
+    }
+    @FXML
+    private void ADD(ActionEvent event) {
+        conn2 = SupplierSQLconnection.ConnectDb2();
+        String sql2 = "Select * from FactureTable";
+        try {
+            assert conn2 != null;
+            ps2=conn2.prepareStatement(sql2);
+            ps2.setString(1,RefMed.getText());
+            ps2.setString(2,QteMed.getText());
+            ps2.setString(3,PriceMed.getText());
+              rs2=ps2.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    private void VALIDATE(ActionEvent event) {
+        conn2 = SupplierSQLconnection.ConnectDb2();
+        String sql2 = "Select * from FactureTable";
+        try {
+            assert conn2 != null;
+            ps2=conn2.prepareStatement(sql2);
+            ps2.setString(1,SuppFirstName.getText());
+            ps2.setString(2,SuppLastName.getText());
+            ps2.setString(3,SuppMailAdress.getText());
+            rs2=ps2.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

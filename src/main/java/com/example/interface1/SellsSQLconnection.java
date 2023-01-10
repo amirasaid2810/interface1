@@ -33,9 +33,11 @@ public class SellsSQLconnection {
 
            while (rs.next()){
 
-               List.add((new SellsTableClass(Integer.parseInt(rs.getString("PurchaseID")), rs.getString("REF"), rs.getString("Date"),rs.getString("Qte"),rs.getString("Price") )));
+               List.add((new SellsTableClass(Integer.parseInt (rs.getString("PurchaseID")), rs.getString("REF"), rs.getString("Date"),rs.getString("Qte"),rs.getString("Price") )));
            }
-       }catch (Exception e) {}
+       }catch (Exception e) {
+           throw new RuntimeException(e);
+       }
 
 
 

@@ -12,13 +12,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
-
 import javax.swing.*;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 public class SellsController  implements Initializable {
@@ -66,10 +62,11 @@ public class SellsController  implements Initializable {
    // ObservableList<SellsTableClass> List;
     int index = -1;
     Connection conn = null;
+
     ResultSet rs = null;
     PreparedStatement ps = null;
 
-   public void Add_Sells(){
+  public void Add_Sells(){
        conn = SellsSQLconnection.ConnectDb();
        String sql = "insert into sellsTables(purchaseID , REF , Date , Qte , Price)values(?,?,?,?,?) ";
        try{
@@ -91,9 +88,9 @@ public class SellsController  implements Initializable {
 
     public void SellNewMedication (ActionEvent Event){
         idcolumn.setText(String.valueOf(medicationid));
-        medicationREF.setText(String.valueOf(REFcolumn));
-        date.setText(String.valueOf(DATEcolumn));
-        medprice.setText(String.valueOf(Pricecolumn));
+        REFcolumn.setText(String.valueOf(medicationREF));
+        DATEcolumn.setText(String.valueOf(date));
+        Pricecolumn.setText(String.valueOf(medprice));
 
           int qte = Integer.parseInt(QTE.getText());
           int qteTable = Integer.parseInt(QTEcolumn.getText());
