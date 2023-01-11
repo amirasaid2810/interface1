@@ -13,10 +13,10 @@
  
  -in our stucture we have the LogIn interface as a first element , after Log in as an Admin or employee ( vendor , manager ) it gets into the HomePage Interface
  
- -the Admin have the capacity of creating accounts or  or deleting accounts ( from Admin Panel Interface ) "add account" boutton navigate to register Interface for a  new creation  
+ -the Admin have the capacity of creating accounts or  or deleting accounts ( from Admin Panel Interface ) "add account" boutton navigate to register Interface for a new creation  
  
  - in Stock interface we can search for a product , add , update or delete products
- - 
+ 
  
  -in Sells Interface we can update the Qte of products ( after buying some of them ) 
  
@@ -27,7 +27,7 @@
 ✺ Folder Structure :
 
  - src/main : Controllers and SQL connection codes 
- - 
+ 
  - ressources : FXML files 
   
  ✺ tools used in this project :
