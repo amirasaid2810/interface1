@@ -65,11 +65,13 @@ public  class SupplierController implements Initializable {
 
     @FXML
     void ValidateCommande(ActionEvent event) {
-        TextInputDialog dialog = new TextInputDialog();
+        Dialog<String> dialog = new Dialog();
         dialog.setTitle("validate");
         dialog.setHeaderText("This commande is sent to this email Adress:");
-        String mailAdressText = SuppMailAdress.getText();
+        ButtonType buttonType= new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);
+        String mailAdressText = SuppMailAdress.getText().toString();
         dialog.setContentText(mailAdressText);
+        dialog.getDialogPane().getButtonTypes().add(buttonType);
         dialog.show();
     }
     @FXML

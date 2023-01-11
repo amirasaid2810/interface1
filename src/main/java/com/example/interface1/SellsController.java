@@ -75,12 +75,12 @@ public class SellsController  implements Initializable {
           qteTable=qteTable-qte;
           QTEcolumn.setText(Integer.toString(qteTable));
 
-
+        assert conn != null;
         conn = SellsSQLconnection.ConnectDb();
-        String sql = "insert into sellsTables(purchaseID , REF , Date , Qte , Price)values(?,?,?,?,?) ";
+       String sql = "insert into sellsTables(purchaseID , REF , Date , Qte , Price)values(?,?,?,?,?) ";
         try{
-            assert conn != null;
-            ps =conn.prepareStatement(sql);
+           assert conn != null;
+           ps =conn.prepareStatement(sql);
             ps.setString(1, QTEcolumn.getText());
             ps.setString(2,DATEcolumn.getText());
             ps.setString(3,REFcolumn.getText());
@@ -89,9 +89,9 @@ public class SellsController  implements Initializable {
             JOptionPane.showMessageDialog(null,"SellsTables add success");
 
 
-        } catch (SQLException e) {
+       } catch (SQLException e) {
            JOptionPane.showMessageDialog(null,e);
-       }
+          }
 
         List = SellsSQLconnection.getDataSellsTable();
          }
@@ -103,7 +103,7 @@ public class SellsController  implements Initializable {
         DATEcolumn.setCellValueFactory(new PropertyValueFactory<>("Date"));
         QTEcolumn.setCellValueFactory(new PropertyValueFactory<>("QTE"));
         Pricecolumn.setCellValueFactory(new PropertyValueFactory<>("Price"));
-          sellsTableView.setItems(List);
+        sellsTableView.setItems(List);
           List = SellsSQLconnection.getDataSellsTable();
     }
 

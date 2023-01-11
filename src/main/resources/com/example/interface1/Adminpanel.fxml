@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="746.0" style="-fx-background-color: BFEFEF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interface1.AdminPanel">
+    <children>
+        <Text fill="#2f8348" layoutX="286.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="   ADMIN PANEL" wrappingWidth="173.13671875">
+            <font>
+                <Font name="Ebrima Bold" size="20.0" />
+            </font>
+        </Text>
+        <Text fill="#287c2e" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports And Analytics:" wrappingWidth="150.13671875">
+            <font>
+                <Font name="System Bold Italic" size="14.0" />
+            </font>
+        </Text>
+        <Button fx:id="SellsButton" layoutX="71.0" layoutY="160.0" mnemonicParsing="false" onAction="#SellsInterface" prefHeight="43.0" prefWidth="133.0" text="SELLS">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="SuppliersButton" layoutX="304.0" layoutY="160.0" mnemonicParsing="false" onAction="#SupplierInterface" prefHeight="43.0" prefWidth="139.0" text="Suppliers">
+            <font>
+                <Font name="System Bold Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="StockButton" layoutX="531.0" layoutY="153.0" mnemonicParsing="false" onAction="#StockInterface" prefHeight="43.0" prefWidth="133.0" text="Stock">
+            <font>
+                <Font name="Ebrima Bold" size="18.0" />
+            </font>
+        </Button>
+        <Text fill="#478d41" layoutX="25.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management" wrappingWidth="150.13671875">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font>
+        </Text>
+        <Button fx:id="AddButton" layoutX="63.0" layoutY="338.0" mnemonicParsing="false" onAction="#registerInterface" prefHeight="43.0" prefWidth="133.0" text=" ADD ACCOUNT">
+            <font>
+                <Font name="Ebrima Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="DeleteButton" layoutX="262.0" layoutY="338.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="158.0" text="Delete Account">
+            <font>
+                <Font name="Ebrima Bold" size="13.0" />
+            </font>
+        </Button>
+    </children>
+</Pane>

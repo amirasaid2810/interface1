@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class SellsSQLconnection {
-    Connection conn = null;
+    Connection conn2 = null;
 
      public static Connection ConnectDb(){
          try{

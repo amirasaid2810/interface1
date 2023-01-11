@@ -14,17 +14,23 @@ import java.util.Objects;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-      //  Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("homepage.fxml")));
-    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Sells.fxml"));
-      //  FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("Supplier.fxml"));
+  //   Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("homepage.fxml")));
+    // Parent root3 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AdminPanel.fxml")));
+        Parent root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
+       // Parent root4 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("register.fxml")));
+ //  FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Sells.fxml"));
+        //FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("Supplier.fxml"));
         // FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("stock.fxml"));
-        Scene scene1 = new Scene(fxmlLoader.load(), 320, 240);
-       //Scene scene2 = new Scene (fxmlLoader2.load());
+      //  Scene scene1 = new Scene(fxmlLoader.load(), 320, 240);
+      // Scene scene2 = new Scene (fxmlLoader2.load());
        // Scene scene3 = new Scene(fxmlLoader3.load());
-      // stage.setScene(new Scene(root));
+   //  stage.setScene(new Scene(root));
+        stage.setScene(new Scene(root2));
+      //  stage.setScene(new Scene(root3));
+       // stage.setScene(new Scene(root4));
         stage.setTitle("Hello!");
        // stage.initStyle(StageStyle.TRANSPARENT);
-       stage.setScene(scene1);
+     //stage.setScene(scene1);
         //stage.setScene(scene2);
        // stage.setScene(scene3);
        stage.show();

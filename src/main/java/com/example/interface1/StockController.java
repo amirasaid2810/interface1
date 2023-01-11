@@ -108,8 +108,6 @@ public class StockController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         UpdateMeds();
 
-
-
     }
 
     public void AddMeds(javafx.event.ActionEvent actionEvent) {
