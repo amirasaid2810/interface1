@@ -14,8 +14,8 @@
  - in Supplier Interface we can register products we would buy from supplier ( Qte*price it shows in Total Commande ) , we can validate that orders and sent them to the supplier mail adress ( showing a dialog for confirmation )
  
 ✺ Folder Structure :
-  src/main : Controllers and SQL connection codes 
-  ressources : FXML files 
+ - src/main : Controllers and SQL connection codes 
+ - ressources : FXML files 
   
  ✺ tools used in this project :
  IntelliJ as IDE 
