@@ -11,6 +11,7 @@
    
  ✺Main Description: 
  
+ 
  -in our stucture we have the LogIn interface as a first element , after Log in as an Admin or employee ( vendor , manager ) it gets into the HomePage Interface
  
  -the Admin have the capacity of creating accounts or  or deleting accounts ( from Admin Panel Interface ) "add account" boutton navigate to register Interface for a new creation  
