@@ -1,7 +1,6 @@
 package com.example.interface1;
 
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -59,32 +58,11 @@ public class SellsController  implements Initializable {
     private Button sellbutton;
     @FXML
     private TableView<SellsTableClass> sellsTableView ;
-   // ObservableList<SellsTableClass> List;
-    int index = -1;
+    ObservableList<SellsTableClass> List;
+     int index = -1;
     Connection conn = null;
-
     ResultSet rs = null;
     PreparedStatement ps = null;
-
-  public void Add_Sells(){
-       conn = SellsSQLconnection.ConnectDb();
-       String sql = "insert into sellsTables(purchaseID , REF , Date , Qte , Price)values(?,?,?,?,?) ";
-       try{
-           assert conn != null;
-           ps =conn.prepareStatement(sql);
-           ps.setString(1, QTEcolumn.getText());
-           ps.setString(2,DATEcolumn.getText());
-           ps.setString(3,REFcolumn.getText());
-           ps.setString(4,Pricecolumn.getText());
-           ps.execute();
-           JOptionPane.showMessageDialog(null,"SellsTables add success");
-
-
-       } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null,e);
-       }
-
-   }
 
     public void SellNewMedication (ActionEvent Event){
         idcolumn.setText(String.valueOf(medicationid));
@@ -96,15 +74,32 @@ public class SellsController  implements Initializable {
           int qteTable = Integer.parseInt(QTEcolumn.getText());
           qteTable=qteTable-qte;
           QTEcolumn.setText(Integer.toString(qteTable));
-         }
 
-     ObservableList<SellsTableClass> List = FXCollections.observableArrayList(
-            new SellsTableClass(1,"abc1","20/12/2025","100","500"));
+
+        conn = SellsSQLconnection.ConnectDb();
+        String sql = "insert into sellsTables(purchaseID , REF , Date , Qte , Price)values(?,?,?,?,?) ";
+        try{
+            assert conn != null;
+            ps =conn.prepareStatement(sql);
+            ps.setString(1, QTEcolumn.getText());
+            ps.setString(2,DATEcolumn.getText());
+            ps.setString(3,REFcolumn.getText());
+           ps.setString(4,Pricecolumn.getText());
+            ps.execute();
+            JOptionPane.showMessageDialog(null,"SellsTables add success");
+
+
+        } catch (SQLException e) {
+           JOptionPane.showMessageDialog(null,e);
+       }
+
+        List = SellsSQLconnection.getDataSellsTable();
+         }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       idcolumn.setCellValueFactory(new PropertyValueFactory<>("Purchase ID"));
-        REFcolumn.setCellValueFactory(new PropertyValueFactory<>("REF"));
+      idcolumn.setCellValueFactory(new PropertyValueFactory<>("Purchase ID"));
+       REFcolumn.setCellValueFactory(new PropertyValueFactory<>("REF"));
         DATEcolumn.setCellValueFactory(new PropertyValueFactory<>("Date"));
         QTEcolumn.setCellValueFactory(new PropertyValueFactory<>("QTE"));
         Pricecolumn.setCellValueFactory(new PropertyValueFactory<>("Price"));

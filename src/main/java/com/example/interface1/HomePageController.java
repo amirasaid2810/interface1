@@ -14,6 +14,8 @@ public class HomePageController {
     private Button SellsButton;
     @FXML
     private Button PurchaseButton;
+    @FXML
+    private Button stockButton;
 
     public void SellsButtonInterface()  throws IOException {
         Stage stage = (Stage) SellsButton.getScene().getWindow();
@@ -23,9 +25,6 @@ public class HomePageController {
         primaryStage.setTitle("Sells interface");
         primaryStage.setScene(new Scene(root,320,240));
         primaryStage.show();
-
-
-
     }
 
 
@@ -37,6 +36,15 @@ public class HomePageController {
         primaryStage.setTitle("Supplier interface");
         primaryStage.setScene(new Scene(root, 320, 240));
         primaryStage.show();
+    }
 
+    public void stockButtonInterface() throws IOException {
+        Stage stage = (Stage) stockButton.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("stock.fxml")));
+        primaryStage.setTitle("Stock interface");
+        primaryStage.setScene(new Scene(root, 320, 240));
+        primaryStage.show();
     }
 }
